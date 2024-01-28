@@ -11,16 +11,16 @@ elif c<-1:
     print(c)
 
 
-###
+##
 print ("please enter your achievement")
 a = float(input()) # 可以把上面print的字符串放进input函数中
 if a>=90:
     print("A")
-elif 90>a<=80: # 此处条件出错
+elif 90>a>=80: # 此处条件出错
     print("B")
-elif 80<a>=70: # 此处条件出错
+elif 80>a>=70: # 此处条件出错
     print("C")
-elif 70<a>=60: # 此处条件出错
+elif 70>a>=60: # 此处条件出错
     print("C")
 elif a<60:
     print("E")
@@ -43,13 +43,23 @@ else:
 print("等级制成绩为：", grade)
 # -----
 
-###
+##
 import math # 不要导入库
-t=input()
-y=input()
-u=input()
-s=(t+y+u)/2
+t = float(input())
+y = float(input())
+u = float(input())
+s = (t+y+u)/2
 if t+y>u:
-    print(t+y+u,math.squrt(s*(s-t)(s-y)(s-u)))
+    print(t+y+u, math.sqrt(s*(s-t)*(s-y)*(s-u)))
+else:
+    print("False")
+    
+t = float(input())
+y = float(input())
+u = float(input())
+s = (t+y+u)/2
+v = (s*(s-t)*(s-y)*(s-u))**0.5
+if t+y>u:
+    print(t+y+u, v)
 else:
     print("False")
