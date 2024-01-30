@@ -1,13 +1,11 @@
-print("please enter a number:")
+print("please enter a positive number:")
 number = int(input())
-if number < 2:
-    print("False")
+if number <= 1:
+    print("please check your input")
 else:
     for i in range(2,number):
-        if number%i==0:
+        if number%i == 0:
             print("False")
-            break
-    else:
-        print("Ture")
-            
-     
+            break  
+    else:         
+        print("True")
